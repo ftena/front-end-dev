@@ -1,4 +1,5 @@
-  @mixin border-radius($radius){ 
+  // Create Reusable CSS with Mixins
+  @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
@@ -11,3 +12,20 @@
     background-color: green;
     @include border-radius(15px);
   }
+
+  // Use @for to Create a Sass Loop
+  @for $j from 1 to 6 {
+    .text-#{$j} {
+      font-size: 15px * $j;
+    }
+  }
+// Use @each to Map Over Items in a List
+@each $color in blue,
+black,
+red {
+  .#{"" + $color}-bg {
+    background-color: $color;
+    height: 200px;
+    width: 200px;
+  }
+}
