@@ -31,7 +31,7 @@
     }
   }
 
-  // 
+  // Apply a Style Until a Condition is Met with @while 
   $x: 6;
   @while $x < 11 {
     .text-#{$x} { font-size: 15px * $x;}
